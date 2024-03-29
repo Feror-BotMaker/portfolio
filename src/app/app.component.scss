@@ -1,0 +1,29 @@
+#mousemove {
+    height: 200px;
+    width: 200px;
+    position: absolute;
+    border-radius: 40%;
+    background: radial-gradient(circle, rgba(255, 255, 255, 0.75) 0%, rgba(244, 244, 244, 0.05) 35%, rgba(0,0,0,0) 100%); 
+    z-index: -2;
+    translate: -50% -50%;
+}
+
+#mousemove.clicked {
+    background: radial-gradient(circle, rgba(255, 255, 255, 0.05) 50%, rgba(244, 244, 244, 0.75) 75%, rgba(0,0,0,0) 80%); 
+}
+#mousemove.click-end {
+    transition: 0.2s ease-in-out;
+    height: 0px;
+    width: 0px;
+}
+
+#semibackground {
+    height: 100vh;
+    width: 100vw;
+    position: absolute;
+    z-index: -1;
+    background-image: url('/assets/patternHexa.png');
+    background-size: 5%;
+    top: 0;
+    left: 0;
+}

@@ -1,9 +1,10 @@
 /* You can add global styles to this file, and also import other style files */
 :root {
-    --fg-color: #212529;
-    --bg-color: #f8f9fa;
-    --bg-tr-color: #f8f9fa99;
+    --fg-color: #f8f9fa;
+    --bg-color: #212529;
+    --bg-tr-color: #4376a920;
     --primary-color: #007bff;
+    --primary-tr-color: #007bff99;
     --secondary-color: #6c757d;
     --success-color: #28a745;
     --danger-color: #dc3545;
@@ -17,4 +18,5 @@ body {
     color: var(--fg-color);
     margin: 0;
     padding: 0;
+    overflow: hidden;
 }

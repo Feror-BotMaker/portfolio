@@ -3,11 +3,12 @@
     background-color: var(--bg-tr-color);
     padding: 10px;
     box-shadow: 0 0 4px 0 var(--fg-color);
-    margin-bottom: 10px;
     display: flex;
     justify-content: space-between;
     align-items: center;
     flex-direction: column;
+    height: 125px;
+    backdrop-filter: blur(2px);
 }
 
 h1 {

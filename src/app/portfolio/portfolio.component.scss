@@ -1,0 +1,81 @@
+:host {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 2vh;
+    overflow-y: scroll;
+    scrollbar-color: var(--primary-color) #00000000;
+    scrollbar-width: thin;
+    height: calc(100vh - 125px);
+    h1 {
+        font-size: 7vw;
+        margin: 0;
+        padding: 0;
+        text-align: center;
+        text-shadow: 0 0 2px var(--bg-color);
+        color: var(--fg-color);
+        margin-bottom: 2vh;
+    }
+    div.article-container {
+        width: 90vw;
+        height: fit-content;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        align-items: center;
+        padding-bottom: 15vw;
+
+        /*
+        Le gap entre les différents niveaux d'articles doit être aussi grand
+        que le gap entre les articles d'un même niveau.
+        La largeur totale sur un niveau de 3 articles est de 90vw, et un article fait 28.3vw de large.
+        Il reste donc 3.7vw à répartir entre les 2 gaps, soit 1.85vw par gap.
+        */
+        gap: 1.85vw;
+
+        div.row-2 {
+            display: grid;
+            place-items: center;
+            grid-template-columns: repeat(2, 1fr);
+            width: calc(2/3 * 100%);
+        }
+
+        div.row-3 {
+            display: grid;
+            place-items: center;
+            grid-template-columns: repeat(3, 1fr);
+            width: 100%;
+        }
+    }
+}
+
+@media screen and (max-width: 500px) {
+    :host {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        div.article-container {
+            width: 98vw;
+            height: fit-content;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-around;
+            align-items: center;
+            gap: 4vw;
+    
+            div.row-2 {
+                display: grid;
+                place-items: center;
+                grid-template-columns: repeat(2, 1fr);
+                width: calc(2/3 * 100%);
+            }
+    
+            div.row-3 {
+                display: grid;
+                place-items: center;
+                grid-template-columns: repeat(3, 1fr);
+                width: 100%;
+            }
+        }
+    }
+}

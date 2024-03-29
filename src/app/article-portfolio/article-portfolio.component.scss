@@ -2,21 +2,23 @@ article {
     margin-top: 8.14vw;
     width: 28.3vw;
     height: 16.3vw;
-    background-color: var(--primary-color);
+    background-color: var(--primary-tr-color);
     position: relative;
     transition: 0.2s ease-in-out;
     cursor:pointer;
     color: var(--bg-color);
+    backdrop-filter: blur(1.2px);
 
     &:before {
         content: " ";
         width: 0; height: 0;
-        border-bottom: 8.14vw solid var(--primary-color);
+        border-bottom: 8.14vw solid var(--primary-tr-color);
         border-left: 14.15vw solid transparent;
         border-right: 14.15vw solid transparent;
         position: absolute;
         top: -8.13vw;
         z-index: -1;
+        transition: 0.2s ease-in-out;
     }
 
     &:after {
@@ -24,18 +26,25 @@ article {
         width: 0;
         position: absolute;
         bottom: -8.13vw;
-        border-top: 8.14vw solid var(--primary-color);
+        border-top: 8.14vw solid var(--primary-tr-color);
         border-left: 14.15vw solid transparent;
         border-right: 14.15vw solid transparent;
         z-index: -1;
+        transition: 0.2s ease-in-out;
     }
 
     &:hover {
-        transform: scale(1.1);
+        transform: scale(1.05) translateY(-0.5vw);
 
         .enSavoirPlus {
             opacity: 1;
         }
+    }
+
+    &.clicked {
+        transition: 0.5s ease-in-out;
+        rotate: 359deg;
+        transform: scale(1.5);
     }
 
     .titleArticle {
@@ -44,7 +53,8 @@ article {
         margin: auto;
         padding: 0;
         text-align: center;
-        text-shadow: 0 0 2px #ffffff;
+        text-shadow: 0 0 2px var(--bg-color);
+        color: var(--fg-color);
         width: fit-content;
         position: absolute;
         top: -4vw;
@@ -58,7 +68,8 @@ article {
         margin: auto;
         padding: 0;
         text-align: center;
-        text-shadow: 0 0 2px #ffffff;
+        text-shadow: 0 0 2px var(--bg-color);
+        color: var(--fg-color);
         width: 90%;
     }
 
@@ -76,11 +87,13 @@ article {
         margin: auto;
         padding: 0;
         text-align: center;
-        text-shadow: 0 0 2px #ffffff;
+        text-shadow: 0 0 2px var(--bg-color);
+        color: var(--fg-color);
         width: fit-content;
         position: absolute;
         bottom: -4vw;
         left: 50%;
+        z-index: 5;
         transform: translateX(-50%);
         opacity: 0.3;
         transition: 0.2s ease-in-out;

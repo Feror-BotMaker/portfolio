@@ -1,8 +1,58 @@
-<app-article-portfolio
-  [article]="{
-    titre: 'MonArticle',
-    imagesrc: 'assets/images/monimage.jpg',
-    description: 'Ma description',
-    lien: 'https://www.google.com'
-  }"
-></app-article-portfolio>
+<h1 id="titre">Portfolio</h1>
+<div class="article-container">
+  <div
+    *ngFor="let row of listAsRows; let rowIndex = index"
+    [class]="rowIndex % 2 === 0 ? 'row-2' : 'row-3'"
+  >
+    <app-article-portfolio
+      *ngFor="let article of row"
+      [article]="article"
+    ></app-article-portfolio>
+  </div>
+  <!-- <div class="article-container">
+  <div class="row-2">
+    <app-article-portfolio
+      [article]="{
+        titre: 'MonArticle',
+        imagesrc: 'assets/images/monimage.jpg',
+        description: 'Ma description',
+        lien: 'https://www.google.com'
+      }"
+    ></app-article-portfolio>
+    <app-article-portfolio
+      [article]="{
+        titre: 'MonArticle',
+        imagesrc: 'assets/images/monimage.jpg',
+        description: 'Ma description',
+        lien: 'https://www.google.com'
+      }"
+    ></app-article-portfolio>
+  </div>
+  <div class="row-3">
+    <app-article-portfolio
+      [article]="{
+        titre: 'MonArticle',
+        imagesrc: 'assets/images/monimage.jpg',
+        description: 'Ma description',
+        lien: 'https://www.google.com'
+      }"
+    ></app-article-portfolio>
+    <app-article-portfolio
+      [article]="{
+        titre: 'MonArticle',
+        imagesrc: 'assets/images/monimage.jpg',
+        description: 'Ma description',
+        lien: 'https://www.google.com'
+      }"
+    ></app-article-portfolio>
+    <app-article-portfolio
+      [article]="{
+        titre: 'MonArticle',
+        imagesrc: 'assets/images/monimage.jpg',
+        description: 'Ma description',
+        lien: 'https://www.google.com'
+      }"
+    ></app-article-portfolio>
+  </div>
+</div> -->
+</div>

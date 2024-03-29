@@ -1,4 +1,4 @@
-<article>
+<article (click)="navigate()" [ngClass]="{ clicked: isClicked }">
   <h1 class="titleArticle">{{ article.titre }}</h1>
   <img src="{{ article.imagesrc }}" />
   <p class="textArticle">
